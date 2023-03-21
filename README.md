@@ -1,2 +1,0 @@
-# MGB
-Projet MBG
