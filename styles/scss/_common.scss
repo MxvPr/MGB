@@ -8,7 +8,7 @@ body {
 }
 
 /* Style pour le slider d'images */
-.slider {
+.produits {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,40 +108,24 @@ div:nth-of-type(n + 6):last-of-type {
 
 /* Style pour la section de marque */
 div:nth-of-type(6) p {
-  font-weight: 400;
-  span {
-    font-weight: bold;
-    color: $couleur-principale;
-    margin-right: 10px;
-  }
+  font-weight: bold;
+  color: $couleur-principale;
 }
 
 /* Style pour la section de dimensions */
 div:nth-of-type(7) p {
-  font-weight: 400;
-  span {
-    font-weight: bold;
-    color: $couleur-principale;
-    margin-right: 10px;
-  }
+  font-weight: bold;
+  color: $couleur-principale;
 }
 
 /* Style pour la section de poids */
 div:nth-of-type(8) p {
-  font-weight: 400;
-  span {
-    font-weight: bold;
-    color: $couleur-principale;
-    margin-right: 10px;
-  }
+  font-weight: bold;
+  color: $couleur-principale;
 }
 
 /* Style pour la section de composition */
 div:nth-of-type(9) p {
-  font-weight: 400;
-  span {
-    font-weight: bold;
-    color: $couleur-principale;
-    margin-right: 10px;
-  }
+  font-weight: bold;
+  color: $couleur-principale;
 }

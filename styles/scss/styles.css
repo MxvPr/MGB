@@ -143,18 +143,18 @@ body {
 }
 
 /* Style pour le slider d'images */
-.slider {
+.produits {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
 }
-.slider img {
+.produits img {
   border: 1px solid #ddd;
   margin: 0 10px;
   transition: all 0.3s ease;
 }
-.slider img:hover {
+.produits img:hover {
   border: 1px solid #007bff;
   transform: scale(1.05);
 }
@@ -237,40 +237,24 @@ div:nth-of-type(n + 6):last-of-type {
 
 /* Style pour la section de marque */
 div:nth-of-type(6) p {
-  font-weight: 400;
-}
-div:nth-of-type(6) p span {
   font-weight: bold;
   color: #007bff;
-  margin-right: 10px;
 }
 
 /* Style pour la section de dimensions */
 div:nth-of-type(7) p {
-  font-weight: 400;
-}
-div:nth-of-type(7) p span {
   font-weight: bold;
   color: #007bff;
-  margin-right: 10px;
 }
 
 /* Style pour la section de poids */
 div:nth-of-type(8) p {
-  font-weight: 400;
-}
-div:nth-of-type(8) p span {
   font-weight: bold;
   color: #007bff;
-  margin-right: 10px;
 }
 
 /* Style pour la section de composition */
 div:nth-of-type(9) p {
-  font-weight: 400;
-}
-div:nth-of-type(9) p span {
   font-weight: bold;
   color: #007bff;
-  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
