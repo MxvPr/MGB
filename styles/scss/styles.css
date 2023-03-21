@@ -237,24 +237,40 @@ div:nth-of-type(n + 6):last-of-type {
 
 /* Style pour la section de marque */
 div:nth-of-type(6) p {
+  font-weight: 400;
+}
+div:nth-of-type(6) p span {
   font-weight: bold;
   color: #007bff;
+  margin-right: 10px;
 }
 
 /* Style pour la section de dimensions */
 div:nth-of-type(7) p {
+  font-weight: 400;
+}
+div:nth-of-type(7) p span {
   font-weight: bold;
   color: #007bff;
+  margin-right: 10px;
 }
 
 /* Style pour la section de poids */
 div:nth-of-type(8) p {
+  font-weight: 400;
+}
+div:nth-of-type(8) p span {
   font-weight: bold;
   color: #007bff;
+  margin-right: 10px;
 }
 
 /* Style pour la section de composition */
 div:nth-of-type(9) p {
+  font-weight: 400;
+}
+div:nth-of-type(9) p span {
   font-weight: bold;
   color: #007bff;
+  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
