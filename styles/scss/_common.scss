@@ -1,30 +1,147 @@
+/* Style de base pour la page */
 html,
 body {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  color: $lightGrey;
+  height: 100%;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
 
-  a {
-    margin: 0;
-    padding: 0;
-    color: $lightGrey;
-    text-decoration: none;
-
-    &:hover {
-      border-bottom: 1px solid $lightGrey;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+/* Style pour le slider d'images */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 
   img {
-    width: 100%;
-    height: auto;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 1px solid $couleur-principale;
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* Style pour le titre et le prix */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+
+  span {
+    font-weight: normal;
+    color: #999;
+    margin-right: 10px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px auto;
+  }
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  margin: 40px;
+}
+
+/* Style pour le bouton d'achat */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: $couleur-principale;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($couleur-principale, 10%);
+    transform: scale(1.1);
+  }
+}
+
+/* Style pour la section de description */
+div {
+  margin: 20px 0;
+  padding: 0 20px;
+
+  p {
+    line-height: 1.5;
+    text-align: justify;
+    span {
+      font-weight: bold;
+      color: $couleur-principale;
+      margin-right: 10px;
+    }
+  }
+}
+
+/* Style pour les informations du produit */
+div:nth-of-type(n + 6) {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+/* Style pour les informations du produit */
+div:nth-of-type(n + 6):last-of-type {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+/* Style pour la section de marque */
+div:nth-of-type(6) p {
+  font-weight: 400;
+  span {
+    font-weight: bold;
+    color: $couleur-principale;
+    margin-right: 10px;
+  }
+}
+
+/* Style pour la section de dimensions */
+div:nth-of-type(7) p {
+  font-weight: 400;
+  span {
+    font-weight: bold;
+    color: $couleur-principale;
+    margin-right: 10px;
+  }
+}
+
+/* Style pour la section de poids */
+div:nth-of-type(8) p {
+  font-weight: 400;
+  span {
+    font-weight: bold;
+    color: $couleur-principale;
+    margin-right: 10px;
+  }
+}
+
+/* Style pour la section de composition */
+div:nth-of-type(9) p {
+  font-weight: 400;
+  span {
+    font-weight: bold;
+    color: $couleur-principale;
+    margin-right: 10px;
   }
 }
