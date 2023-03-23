@@ -2,13 +2,11 @@
 
 function ajouterUser($pseudo, $email, $motdepasse)
 {
-  if (require("inscription.php")) {
-    $req = $access->prepare("INSERT INTO utilisateur (pseudo, email, motdepasse) VALUES (?, ?, ?)");
-
-    $req->execute(array($pseudo, $email, $motdepasse));
-
-    $req->closeCursor();
-  }
+  include_once("connexion.php");
+  $req = $access->prepare("INSERT INTO utilisateur (pseudo, email, motdepasse) VALUES (?, ?, ?)");
+  $req->execute(array($pseudo, $email, $motdepasse));
+  return $req;
+  $req->closeCursor();
 }
 
 // function getUsers($email, $password){

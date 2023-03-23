@@ -1,7 +1,7 @@
 <?php
 // session_start();
 
-include "commandes.php";
+include "config/commandes.php";
 
 // if(isset($_SESSION['userxXJppk45hPGu']))
 // {
@@ -63,18 +63,16 @@ include "commandes.php";
 <?php
 
 if (isset($_POST['envoyer'])) {
-    if (isset($_POST['pseudo']) and isset($_POST['email']) and isset($_POST['motdepasse'])) {
-        if (!empty($_POST['pseudo']) and !empty($_POST['email']) and !empty($_POST['motdepasse'])) {
-            $pseudo = htmlspecialchars(strip_tags($_POST['pseudo']));
-            $email = htmlspecialchars(strip_tags($_POST['email']));
-            $motdepasse = htmlspecialchars(strip_tags($_POST['motdepasse']));
+    $pseudo = trim($_POST['pseudo']);
+    $email = trim($_POST['email']);
+    $motdepasse = trim($_POST['motdepasse']);
 
-            try {
-                ajouterUser($pseudo, $email, $motdepasse);
-            } catch (Exception $e) {
-                $e->getMessage();
-            }
-        }
+    if (!empty($pseudo) && !empty($email) && !empty($motdepasse)) {
+        ajouterUser($pseudo, $email, $motdepasse);
+        header('Location: index.php');
+        exit();
+    } else {
+        echo "Veuillez remplir tous les champs.";
     }
 }
 
