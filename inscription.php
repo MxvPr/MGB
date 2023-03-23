@@ -37,12 +37,8 @@ include "config/commandes.php";
 
                 <form method="post">
                     <div class="mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input type="name" name="nom" class="form-control" style="width: 350%;">
-                    </div>
-                    <div class="mb-3">
-                        <label for="prenom" class="form-label">Prenom</label>
-                        <input type="name" name="prenom" class="form-control" style="width: 350%;">
+                        <label for="pseudo" class="form-label">Pseudo</label>
+                        <input type="pseudo" name="pseudo" class="form-control" style="width: 350%;">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -67,19 +63,17 @@ include "config/commandes.php";
 <?php
 
 if (isset($_POST['envoyer'])) {
-    if (!empty($_POST['email']) and !empty($_POST['motdepasse']) and !empty($_POST['nom']) and !empty($_POST['prenom'])) {
-        $email = htmlspecialchars(strip_tags($_POST['email']));
-        $motdepasse = htmlspecialchars(strip_tags($_POST['motdepasse']));
-        $nom = htmlspecialchars(strip_tags($_POST['nom']));
-        $prenom = htmlspecialchars(strip_tags($_POST['prenom']));
+    if (isset($_POST['pseudo']) and isset($_POST['email']) and isset($_POST['motdepasse'])) {
+        if (!empty($_POST['pseudo']) and !empty($_POST['email']) and !empty($_POST['motdepasse'])) {
+            $pseudo = htmlspecialchars(strip_tags($_POST['pseudo']));
+            $email = htmlspecialchars(strip_tags($_POST['email']));
+            $motdepasse = htmlspecialchars(strip_tags($_POST['motdepasse']));
 
-        $user = ajouterUser($nom, $prenom, $email, $motdepasse);
-
-        if ($user) {
-            // $_SESSION['userxXJppk45hPGu'] = $user;
-            header('Location: index.php');
-        } else {
-            echo "Compte non créer !";
+            try {
+                ajouterUser($pseudo, $email, $motdepasse);
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
         }
     }
 }

@@ -1,26 +1,11 @@
 <?php
 
-function ajouterUser($nom, $prenom, $email, $motdepasse)
-{
-  if (require("connexion.php")) {
-    $req = $access->prepare("INSERT INTO utilisateurs (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)");
-
-    $req->execute(array($nom, $prenom, $email, $motdepasse));
-
-    return true;
-
-    $req->closeCursor();
-  }
-}
-
-function ajouterUtilisateur($nom, $prenom, $email, $motdepasse)
+function ajouterUser($pseudo, $email, $motdepasse)
 {
   if (require("inscription.php")) {
-    $req = $access->prepare("INSERT INTO utilisateurs (nom, prenom, email, motdepasse) VALUES (?, ?, ?, ?)");
+    $req = $access->prepare("INSERT INTO utilisateur (pseudo, email, motdepasse) VALUES (?, ?, ?)");
 
-    $req->execute(array($nom, $prenom, $email, $motdepasse));
-
-    return true;
+    $req->execute(array($pseudo, $email, $motdepasse));
 
     $req->closeCursor();
   }
