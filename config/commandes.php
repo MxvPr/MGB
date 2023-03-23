@@ -9,36 +9,32 @@ function ajouterUser($pseudo, $email, $motdepasse)
   $req->closeCursor();
 }
 
-// function getUsers($email, $password){
+function getUsers($email, $password)
+{
 
-//   if(require("connexion.php")){
+  if (require("connexion.php")) {
 
-//     $req = $access->prepare("SELECT * FROM utilisateur ");
+    $req = $access->prepare("SELECT * FROM utilisateur ");
 
-//     $req->execute();
+    $req->execute();
 
-//     if($req->rowCount() == 1){
+    if ($req->rowCount() == 1) {
 
-//       $data = $req->fetchAll(PDO::FETCH_OBJ);
+      $data = $req->fetchAll(PDO::FETCH_OBJ);
 
-//       foreach($data as $i){
-//         $mail = $i->email;
-//         $mdp = $i->motdepasse;
-//       }
+      foreach ($data as $i) {
+        $mail = $i->email;
+        $mdp = $i->motdepasse;
+      }
 
-//       if($mail == $email AND $mdp == $password)
-//       {
-//         return $data;
-//       }
-//       else{
-//           return false;
-//       }
-
-//     }
-
-//   }
-
-// }
+      if ($mail == $email and $mdp == $password) {
+        return $data;
+      } else {
+        return false;
+      }
+    }
+  }
+}
 
 function modifier($image, $nom, $prix, $desc, $id)
 {

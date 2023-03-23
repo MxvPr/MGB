@@ -54,7 +54,8 @@ $Produits = afficher();
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Se connecter</h4>
             <ul class="list-unstyled">
-              <li><a href="login.php" class="text-white">Utilisateur</a></li>
+              <li><a href="login.php" class="text-white">Admin</a></li>
+              <li><a href="loginUser.php" class="text-white">Utilisateur</a></li>
               <li><a href="inscription.php" class="text-white">Inscription</a></li>
             </ul>
           </div>
