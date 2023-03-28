@@ -10,4 +10,11 @@ if (isset($_SESSION['xRttpHo0greL39'])){
     header("Location: ../index.php");
 }
 
-?>
+if (isset($_SESSION['user'])){
+
+    $_SESSION['user'] = array();
+
+    session_destroy();
+
+    header("Location: ../index.php");
+}

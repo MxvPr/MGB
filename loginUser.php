@@ -5,7 +5,7 @@ include "config/commandes.php";
 
 if (isset($_SESSION['user'])) {
     if (!empty($_SESSION['user'])) {
-        header("Location: loginUser.php");
+        header("Location: commande.php");
     }
 }
 
@@ -17,10 +17,10 @@ if (isset($_SESSION['user'])) {
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatib9le" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Login - MoBiGo</title>
+    <title>Login User - MoBiGo</title>
 </head>
 
 <body>
@@ -65,7 +65,7 @@ if (isset($_POST['envoyer'])) {
 
         if ($user) {
             $_SESSION['user'] = $user;
-            header('Location: admin/afficher.php');
+            header('Location: commande.php');
         } else {
             header('Location: index.php');
         }
