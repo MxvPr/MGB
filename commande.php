@@ -11,10 +11,6 @@ if (empty($_SESSION['user'])) {
 
 require("config/commandes.php");
 
-foreach ($_SESSION['user'] as $i) {
-    $nom = $i->pseudo;
-    $email = $i->email;
-}
 ?>
 
 
@@ -28,7 +24,7 @@ foreach ($_SESSION['user'] as $i) {
     <title>Document</title>
 
     <div style="margin-right: 500px">
-        <h5 style="color: #545659; opacity: 0.5;">Connecté en tant que: <?= $nom ?></h5>
+        <h5 style="color: #545659; opacity: 0.5;">Connecté en tant qu'utilisateur</h5>
     </div>
     <div>
         <a class="btn btn-danger d-flex" style="display: flex; justify-content: flex-end;" href="admin/destroy.php">Se deconnecter</a>

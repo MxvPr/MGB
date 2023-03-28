@@ -60,16 +60,20 @@ require "../MGB/config/connexion.php";
 if (!empty($_POST['email']) && !empty($_POST['motdepasse'])) {
     $login = $_POST['email'];
     $motdepasse = $_POST['motdepasse'];
- 
+
     $q = $access->prepare('SELECT * FROM utilisateur WHERE email = :email');
     $q->bindValue('email', $login);
     $q->execute();
     $res = $q->fetch(PDO::FETCH_ASSOC);
 
+    $user = getUsers($login, $motdepasse);
+
 
     if ($res) {
         $passwordHash = $res['motdepasse'];
         if (password_verify($motdepasse, $passwordHash)) {
+            $_SESSION['user'] = $res;
+            header('Location: index.php');
             echo "Connexion réussie !";
         } else {
             echo "Identifiants invalides";

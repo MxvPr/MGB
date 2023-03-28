@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['user'])) {
+  header("Location: loginUser.php");
+}
+
+if (empty($_SESSION['user'])) {
+  header("Location: loginUser.php");
+}
 
 require("config/commandes.php");
 
@@ -21,6 +30,10 @@ $Produits = afficher();
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
+  <div style="margin-right: 500px; display: flex; justify-content: space-around">
+    <h5 style="color: #545659; opacity: 0.5;">Connecté en tant qu'utilisateur</h5>
+    <a class="btn btn-danger" href="admin/destroy.php">Se deconnecter</a>
+  </div>
 
   <style>
     .bd-placeholder-img {
