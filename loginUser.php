@@ -56,20 +56,26 @@ if (isset($_SESSION['user'])) {
 
 <?php
 
-if (isset($_POST['envoyer'])) {
-    if (!empty($_POST['email']) and !empty($_POST['motdepasse'])) {
-        $login = htmlspecialchars(strip_tags($_POST['email']));
-        $motdepasse = htmlspecialchars(strip_tags($_POST['motdepasse']));
+require "../MGB/config/connexion.php";
+if (!empty($_POST['email']) && !empty($_POST['motdepasse'])) {
+    $login = $_POST['email'];
+    $motdepasse = $_POST['motdepasse'];
+ 
+    $q = $access->prepare('SELECT * FROM utilisateur WHERE email = :email');
+    $q->bindValue('email', $login);
+    $q->execute();
+    $res = $q->fetch(PDO::FETCH_ASSOC);
 
-        $user = getUsers($login, $motdepasse);
 
-        if ($user) {
-            $_SESSION['user'] = $user;
-            header('Location: commande.php');
+    if ($res) {
+        $passwordHash = $res['motdepasse'];
+        if (password_verify($motdepasse, $passwordHash)) {
+            echo "Connexion réussie !";
         } else {
-            header('Location: index.php');
+            echo "Identifiants invalides";
         }
+    } else {
+        echo "Identifiants invalides";
     }
 }
-
 ?>
