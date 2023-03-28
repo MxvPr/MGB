@@ -1,7 +1,7 @@
 <?php
 
 try {
-	$access = new pdo("mysql:host=localhost;dbname=mobigo;charset=utf8", "root", "root");
+	$access = new pdo("mysql:host=localhost;dbname=mobigo;charset=utf8", "root", "");
 
 	$access->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (Exception $e) {
