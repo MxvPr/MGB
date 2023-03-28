@@ -65,7 +65,7 @@ include "config/commandes.php";
 if (isset($_POST['envoyer'])) {
     $pseudo = trim($_POST['pseudo']);
     $email = trim($_POST['email']);
-    $motdepasse = trim($_POST['motdepasse']);
+    $motdepasse = password_hash($_POST['motdepasse'], PASSWORD_DEFAULT);
 
     if (!empty($pseudo) && !empty($email) && !empty($motdepasse)) {
         ajouterUser($pseudo, $email, $motdepasse);
