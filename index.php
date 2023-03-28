@@ -1,13 +1,5 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['user'])) {
-  header("Location: loginUser.php");
-}
-
-if (empty($_SESSION['user'])) {
-  header("Location: loginUser.php");
-}
 
 require("config/commandes.php");
 
