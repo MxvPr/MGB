@@ -62,6 +62,7 @@ $Produits = afficher();
               <li><a href="login.php" class="text-white">Admin</a></li>
               <li><a href="loginUser.php" class="text-white">Utilisateur</a></li>
               <li><a href="inscription.php" class="text-white">Inscription</a></li>
+              <li><a href="/panier/panier.html" class="text-white">Panier</a></li>
             </ul>
           </div>
         </div>
