@@ -1,5 +1,10 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['user'])) {
+  echo '<a class="btn btn-danger" href="admin/destroy.php">Se deconnecter</a>';
+}
 
 require("config/commandes.php");
 

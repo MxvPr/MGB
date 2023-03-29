@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['xRttpHo0greL39'])){
+if (isset($_SESSION['xRttpHo0greL39'])) {
 
     $_SESSION['xRttpHo0greL39'] = array();
 
@@ -10,11 +10,15 @@ if (isset($_SESSION['xRttpHo0greL39'])){
     header("Location: ../index.php");
 }
 
-if (isset($_SESSION['user'])){
+if (isset($_SESSION['user'])) {
 
     $_SESSION['user'] = array();
 
     session_destroy();
 
+    header("Location: ../index.php");
+}
+
+if (empty($_SESSION['user'])) {
     header("Location: ../index.php");
 }

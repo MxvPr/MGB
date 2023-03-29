@@ -56,7 +56,7 @@ if (isset($_SESSION['user'])) {
 
 <?php
 
-require "../MGB/config/connexion.php";
+require "config/connexion.php";
 if (!empty($_POST['email']) && !empty($_POST['motdepasse'])) {
     $login = $_POST['email'];
     $motdepasse = $_POST['motdepasse'];
@@ -72,9 +72,8 @@ if (!empty($_POST['email']) && !empty($_POST['motdepasse'])) {
     if ($res) {
         $passwordHash = $res['motdepasse'];
         if (password_verify($motdepasse, $passwordHash)) {
-            $_SESSION['user'] = $res;
+            $_SESSION['user'] = $user;
             header('Location: index.php');
-            echo "Connexion réussie !";
         } else {
             echo "Identifiants invalides";
         }
