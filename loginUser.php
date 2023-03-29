@@ -72,7 +72,7 @@ if (!empty($_POST['email']) && !empty($_POST['motdepasse'])) {
     if ($res) {
         $passwordHash = $res['motdepasse'];
         if (password_verify($motdepasse, $passwordHash)) {
-            $_SESSION['user'] = $user;
+            $_SESSION['user'] = $res;
             header('Location: index.php');
         } else {
             echo "Identifiants invalides";

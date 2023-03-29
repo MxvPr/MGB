@@ -1,7 +1,7 @@
 <?php
 
 require("config/commandes.php");
-require("panier.class.php");
+require("panier/panier.class.php");
 $panier = new panier();
 
 
