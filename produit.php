@@ -23,9 +23,7 @@ if (isset($_GET['pdt'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Produit</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
@@ -59,12 +57,15 @@ if (isset($_GET['pdt'])) {
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">A propos</h4>
-                        <p class="text-muted">Bienvenue sur MoBiGo</p>
+                        <p class="text-muted">Bienvenu sur MoBiGo, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Se connecter</h4>
                         <ul class="list-unstyled">
-                            <li><a href="login.php" class="text-white">Se connecter</a></li>
+                            <li><a href="login.php" class="text-white">Admin</a></li>
+                            <li><a href="loginUser.php" class="text-white">Utilisateur</a></li>
+                            <li><a href="inscription.php" class="text-white">Inscription</a></li>
+                            <li><a href="/panier/panier.html" class="text-white">Panier</a></li>
                         </ul>
                     </div>
                 </div>

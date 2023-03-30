@@ -2,8 +2,11 @@
 
 session_start();
 
+
 if (isset($_SESSION['user'])) {
-  echo '<a class="btn btn-danger" href="admin/destroy.php">Se deconnecter</a>';
+  echo '<div style="display: flex; justify-content: space-around">
+  <h5 style="color: #545659; opacity: 0.5;">Connecté en tant que <?= $_SESSION["user"]["pseudo"]; ?> </h5><a class="btn btn-danger ml-auto" href="admin/destroy.php">Se deconnecter</a>
+</div>';
 }
 
 require("config/commandes.php");
@@ -19,18 +22,11 @@ $Produits = afficher();
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.80.0">
   <title>Accueil</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-  <div style="margin-right: 500px; display: flex; justify-content: space-around">
-    <h5 style="color: #545659; opacity: 0.5;">Connecté en tant qu'utilisateur</h5>
-    <a class="btn btn-danger" href="admin/destroy.php">Se deconnecter</a>
-  </div>
 
   <style>
     .bd-placeholder-img {
@@ -59,7 +55,7 @@ $Produits = afficher();
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">A propos</h4>
-            <p class="text-muted">Bienvenu sur MoBiGo, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
+            <p class="text-muted">Bienvenu sur MoBiGo <?php echo $_SESSION["user"]["pseudo"]; ?>, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Se connecter</h4>
