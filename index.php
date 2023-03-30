@@ -55,7 +55,7 @@ $Produits = afficher();
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">A propos</h4>
-            <p class="text-muted">Bienvenu sur Creativ'Prot <?php echo $_SESSION["user"]["pseudo"]; ?>, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
+            <p class="text-muted">Bienvenu sur Creativ'Prot, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Se connecter</h4>
