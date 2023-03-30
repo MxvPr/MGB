@@ -57,7 +57,7 @@ if (isset($_GET['pdt'])) {
                 <div class="row">
                     <div class="col-sm-8 col-md-7 py-4">
                         <h4 class="text-white">A propos</h4>
-                        <p class="text-muted">Bienvenu sur MoBiGo, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
+                        <p class="text-muted">Bienvenu sur Creativ'Prot, le premier site d'e-commerce concernant vos achat de produits sportif !</p>
                     </div>
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Se connecter</h4>
@@ -74,7 +74,7 @@ if (isset($_GET['pdt'])) {
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a href="index.php" class="navbar-brand d-flex align-items-center">
-                    <strong>MoBiGo</strong>
+                    <strong>Creativ'Prot</strong>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
